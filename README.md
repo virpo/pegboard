@@ -8,13 +8,20 @@ AI-generated 3D-printable pegboard toy from a hand-drawn sketch.
 
 This repository is what came out of that experiment: a small printable pegboard toy set built on a `40 mm` grid, with seven play pieces, one tuned peg, four gears, and two printable boards.
 
-<p align="center">
-  <img src="assets/from-sketch-to-play.jpg" alt="Original sketch next to Oli playing with the first printed set" width="100%">
-</p>
-
-| What I gave AI | What it gave me |
-| --- | --- |
-| One rough marker sketch with just the peg spacing and peg diameter. | Oli playing with the first working printed set after a few fit-test iterations. |
+<table>
+  <tr>
+    <th width="50%">What I gave AI</th>
+    <th width="50%">What it gave me</th>
+  </tr>
+  <tr>
+    <td><img src="assets/sketch.jpg" alt="Hand-drawn pegboard sketch" width="100%"></td>
+    <td><img src="assets/oliver-playing.jpg" alt="Oli playtesting the first printed pegboard set" width="100%"></td>
+  </tr>
+  <tr>
+    <td>One rough marker sketch with just the peg spacing and peg diameter.</td>
+    <td>Oli playtesting the first working printed set after a few fit-test iterations.</td>
+  </tr>
+</table>
 
 The geometry is kept as plain Python generators, then tuned through real print-and-fit tests.
 
