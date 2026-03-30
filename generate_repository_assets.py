@@ -256,15 +256,22 @@ def generate_overview():
     draw_centered(board_5x5, 1450, 740, 1.45, BOARD_FILL)
 
     peg = peg_profile()
+    peg_vertical = affinity.rotate(peg, 90.0, origin=(0.0, 0.0))
+    peg_color = "#D9CBB8"
     peg_layout = [
-        (1050, 1005, PIECE_COLORS[0]),
-        (1140, 1005, PIECE_COLORS[1]),
-        (1230, 1005, PIECE_COLORS[2]),
-        (1320, 1005, PIECE_COLORS[3]),
-        (1410, 1005, PIECE_COLORS[4]),
+        (1005, 930),
+        (1065, 930),
+        (1125, 930),
+        (1185, 930),
+        (1245, 930),
+        (1305, 930),
+        (1365, 930),
+        (1425, 930),
+        (1485, 930),
+        (1545, 930),
     ]
-    for center_x, center_y, color in peg_layout:
-        draw_centered(peg, center_x, center_y, 2.1, color)
+    for center_x, center_y in peg_layout:
+        draw_centered(peg_vertical, center_x, center_y, 2.1, peg_color)
 
     logical_image.resize((CANVAS_W, CANVAS_H), Image.Resampling.LANCZOS).save(ASSETS_DIR / "overview.png", quality=95)
 
