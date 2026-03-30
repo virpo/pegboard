@@ -14,6 +14,18 @@ I had a silly idea for a pegboard toy. Before opening Fusion, SketchUp, or any o
 
 This repository is the result. The geometry is kept as plain Python generators, then tuned through real print-and-fit tests.
 
+## Use AI To Tweak It
+
+If you use coding agents yourself, this repo is meant to be easy to modify. There is an [AGENTS.md](AGENTS.md) at the root with the current dimensions, folder layout, and a few rules for extending the models safely.
+
+You can ask an agent to:
+
+- build a bigger pegboard like `6x6`
+- make the pegs longer or shorter
+- add new pieces for different peg combinations
+- scale the whole system up or down
+- generate tighter or looser fit-test variants
+
 ## What's in this repository
 
 <p align="center">
@@ -42,6 +54,8 @@ This repository is the result. The geometry is kept as plain Python generators, 
   Generates the board-fit coupons and the full printable boards.
 - `generate_repository_assets.py`  
   Builds the README images.
+- `AGENTS.md`  
+  Instructions for coding agents that want to extend the set.
 
 ## Tuned dimensions
 
