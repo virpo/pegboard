@@ -258,20 +258,15 @@ def generate_overview():
     peg = peg_profile()
     peg_vertical = affinity.rotate(peg, 90.0, origin=(0.0, 0.0))
     peg_color = "#DD825A"
-    peg_layout = [
-        (1030, 980),
-        (1080, 980),
-        (1130, 980),
-        (1180, 980),
-        (1230, 980),
-        (1320, 980),
-        (1370, 980),
-        (1420, 980),
-        (1470, 980),
-        (1520, 980),
-    ]
+    peg_scale = 2.1
+    peg_gap = shapes_gen.PEG_DIAMETER_MM * peg_scale
+    peg_step = 2.0 * peg_gap
+    peg_row_center_x = 1296.0
+    peg_row_y = 980.0
+    peg_first_x = peg_row_center_x - peg_step * 4.5
+    peg_layout = [(peg_first_x + index * peg_step, peg_row_y) for index in range(10)]
     for center_x, center_y in peg_layout:
-        draw_centered(peg_vertical, center_x, center_y, 2.1, peg_color)
+        draw_centered(peg_vertical, center_x, center_y, peg_scale, peg_color)
 
     logical_image.resize((CANVAS_W, CANVAS_H), Image.Resampling.LANCZOS).save(ASSETS_DIR / "overview.png", quality=95)
 
