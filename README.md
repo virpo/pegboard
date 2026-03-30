@@ -6,7 +6,7 @@ AI-generated 3D-printable pegboard toy from a hand-drawn sketch.
 
 > I had a silly idea for a pegboard toy. Before opening Fusion, SketchUp, or any other CAD tool and drawing it by hand, I wanted to see what an AI agent would do with a rough sketch and two dimensions: the pegs are `40 mm` apart and `8 mm` wide.
 
-I wanted to make something for Oli without spending the whole evening drawing parts in CAD. So I tried a different route: one marker sketch, two hard constraints, and an agent.
+The goal was simple: get to something real quickly, then spend the time on printing, testing, and playing with Oli instead of drawing every piece from scratch.
 
 <table>
   <tr>
