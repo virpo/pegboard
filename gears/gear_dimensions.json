@@ -1,0 +1,231 @@
+{
+  "01_gear_6t": {
+    "file": "01_gear_6t.stl",
+    "teeth": 6,
+    "pitch_radius_mm": 13.333,
+    "outer_radius_mm": 16.0,
+    "root_radius_mm": 9.778,
+    "overall_xyz_mm": [
+      31.999,
+      29.122,
+      6.0
+    ],
+    "bounds_xy_mm": [
+      -16.0,
+      -14.561,
+      16.0,
+      14.561
+    ],
+    "hole_diameter_mm": 8.45,
+    "thickness_mm": 6.0,
+    "blocked_offsets": []
+  },
+  "02_gear_12t": {
+    "file": "02_gear_12t.stl",
+    "teeth": 12,
+    "pitch_radius_mm": 26.667,
+    "outer_radius_mm": 29.333,
+    "root_radius_mm": 23.111,
+    "overall_xyz_mm": [
+      58.664,
+      58.664,
+      6.0
+    ],
+    "bounds_xy_mm": [
+      -29.332,
+      -29.332,
+      29.332,
+      29.332
+    ],
+    "hole_diameter_mm": 8.45,
+    "thickness_mm": 6.0,
+    "blocked_offsets": []
+  },
+  "03_gear_24t": {
+    "file": "03_gear_24t.stl",
+    "teeth": 24,
+    "pitch_radius_mm": 53.333,
+    "outer_radius_mm": 56.0,
+    "root_radius_mm": 49.778,
+    "overall_xyz_mm": [
+      111.998,
+      111.998,
+      6.0
+    ],
+    "bounds_xy_mm": [
+      -55.999,
+      -55.999,
+      55.999,
+      55.999
+    ],
+    "hole_diameter_mm": 8.45,
+    "thickness_mm": 6.0,
+    "blocked_offsets": [
+      [
+        -1,
+        -1
+      ],
+      [
+        -1,
+        0
+      ],
+      [
+        -1,
+        1
+      ],
+      [
+        0,
+        -1
+      ],
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        -1
+      ],
+      [
+        1,
+        0
+      ],
+      [
+        1,
+        1
+      ]
+    ]
+  },
+  "04_gear_30t": {
+    "file": "04_gear_30t.stl",
+    "teeth": 30,
+    "pitch_radius_mm": 66.667,
+    "outer_radius_mm": 69.333,
+    "root_radius_mm": 63.111,
+    "overall_xyz_mm": [
+      138.665,
+      138.16,
+      6.0
+    ],
+    "bounds_xy_mm": [
+      -69.332,
+      -69.08,
+      69.332,
+      69.08
+    ],
+    "hole_diameter_mm": 8.45,
+    "thickness_mm": 6.0,
+    "blocked_offsets": [
+      [
+        -1,
+        -1
+      ],
+      [
+        -1,
+        0
+      ],
+      [
+        -1,
+        1
+      ],
+      [
+        0,
+        -1
+      ],
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        -1
+      ],
+      [
+        1,
+        0
+      ],
+      [
+        1,
+        1
+      ]
+    ]
+  },
+  "all_gears_layout": {
+    "file": "all_gears_layout.stl",
+    "placements": {
+      "01_gear_6t": {
+        "bounds_xy_mm": [
+          42.0,
+          173.439,
+          74.0,
+          202.561
+        ]
+      },
+      "02_gear_12t": {
+        "bounds_xy_mm": [
+          158.668,
+          30.668,
+          217.332,
+          89.332
+        ]
+      },
+      "03_gear_24t": {
+        "bounds_xy_mm": [
+          132.001,
+          132.001,
+          243.999,
+          243.999
+        ]
+      },
+      "04_gear_30t": {
+        "bounds_xy_mm": [
+          4.668,
+          4.92,
+          143.332,
+          143.08
+        ]
+      }
+    },
+    "validation": [
+      {
+        "pair": [
+          6,
+          12
+        ],
+        "center_distance_mm": 40.0,
+        "sampled_max_intersection_area_mm2": 0.0,
+        "sampled_min_gap_mm": 0.2017,
+        "suggested_phase_offset_deg": 15.0
+      },
+      {
+        "pair": [
+          12,
+          24
+        ],
+        "center_distance_mm": 80.0,
+        "sampled_max_intersection_area_mm2": 0.0,
+        "sampled_min_gap_mm": 0.3021,
+        "suggested_phase_offset_deg": 7.5
+      },
+      {
+        "pair": [
+          24,
+          30
+        ],
+        "center_distance_mm": 120.0,
+        "sampled_max_intersection_area_mm2": 0.0,
+        "sampled_min_gap_mm": 0.3537,
+        "suggested_phase_offset_deg": 6.0
+      },
+      {
+        "pair": [
+          6,
+          30
+        ],
+        "center_distance_mm": 80.0,
+        "sampled_max_intersection_area_mm2": 0.0,
+        "sampled_min_gap_mm": 0.2333,
+        "suggested_phase_offset_deg": 6.0
+      }
+    ]
+  }
+}

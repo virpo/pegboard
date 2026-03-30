@@ -1,0 +1,94 @@
+{
+  "01_board_fit_coupon_hole_8p25_thick_15": {
+    "file": "01_board_fit_coupon_hole_8p25_thick_15.stl",
+    "overall_xyz_mm": [
+      16.25,
+      16.25,
+      15.0
+    ],
+    "bounds_xyz_mm": [
+      -8.125,
+      -8.125,
+      -7.5,
+      8.125,
+      8.125,
+      7.5
+    ],
+    "hole_diameter_mm": 8.25,
+    "coupon_thickness_mm": 15.0,
+    "coupon_wall_mm": 4.0
+  },
+  "02_board_fit_coupon_hole_8p30_thick_15_recommended": {
+    "file": "02_board_fit_coupon_hole_8p30_thick_15_recommended.stl",
+    "overall_xyz_mm": [
+      16.3,
+      16.3,
+      15.0
+    ],
+    "bounds_xyz_mm": [
+      -8.15,
+      -8.15,
+      -7.5,
+      8.15,
+      8.15,
+      7.5
+    ],
+    "hole_diameter_mm": 8.3,
+    "coupon_thickness_mm": 15.0,
+    "coupon_wall_mm": 4.0
+  },
+  "03_board_fit_coupon_hole_8p35_thick_15": {
+    "file": "03_board_fit_coupon_hole_8p35_thick_15.stl",
+    "overall_xyz_mm": [
+      16.35,
+      16.35,
+      15.0
+    ],
+    "bounds_xyz_mm": [
+      -8.175,
+      -8.175,
+      -7.5,
+      8.175,
+      8.175,
+      7.5
+    ],
+    "hole_diameter_mm": 8.35,
+    "coupon_thickness_mm": 15.0,
+    "coupon_wall_mm": 4.0
+  },
+  "all_board_fit_coupons_layout": {
+    "file": "all_board_fit_coupons_layout.stl",
+    "placements": {
+      "01_board_fit_coupon_hole_8p25_thick_15": {
+        "bounds_xyz_mm": [
+          0.0,
+          0.0,
+          -7.5,
+          16.25,
+          16.25,
+          7.5
+        ]
+      },
+      "02_board_fit_coupon_hole_8p30_thick_15_recommended": {
+        "bounds_xyz_mm": [
+          26.25,
+          0.0,
+          -7.5,
+          42.55,
+          16.3,
+          7.5
+        ]
+      },
+      "03_board_fit_coupon_hole_8p35_thick_15": {
+        "bounds_xyz_mm": [
+          52.55,
+          0.0,
+          -7.5,
+          68.9,
+          16.35,
+          7.5
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,5 @@
+numpy
+shapely
+trimesh
+mapbox_earcut
+Pillow

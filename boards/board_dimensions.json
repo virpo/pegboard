@@ -1,0 +1,50 @@
+{
+  "01_pegboard_4x4_hole_8p30_provisional": {
+    "file": "01_pegboard_4x4_hole_8p30_provisional.stl",
+    "grid": [
+      4,
+      4
+    ],
+    "overall_xyz_mm": [
+      160.0,
+      160.0,
+      15.0
+    ],
+    "bounds_xyz_mm": [
+      0.0,
+      0.0,
+      -7.5,
+      160.0,
+      160.0,
+      7.5
+    ],
+    "hole_diameter_mm": 8.3,
+    "thickness_mm": 15.0,
+    "grid_pitch_mm": 40.0,
+    "edge_margin_mm": 20.0
+  },
+  "02_pegboard_5x5_hole_8p30_provisional": {
+    "file": "02_pegboard_5x5_hole_8p30_provisional.stl",
+    "grid": [
+      5,
+      5
+    ],
+    "overall_xyz_mm": [
+      200.0,
+      200.0,
+      15.0
+    ],
+    "bounds_xyz_mm": [
+      0.0,
+      0.0,
+      -7.5,
+      200.0,
+      200.0,
+      7.5
+    ],
+    "hole_diameter_mm": 8.3,
+    "thickness_mm": 15.0,
+    "grid_pitch_mm": 40.0,
+    "edge_margin_mm": 20.0
+  }
+}

@@ -1,0 +1,288 @@
+{
+  "01_straight_2_holes": {
+    "file": "01_straight_2_holes.stl",
+    "overall_xy_mm": [
+      56.0,
+      16.0
+    ],
+    "overall_xyz_mm": [
+      56.0,
+      16.0,
+      3.0
+    ],
+    "bounds_xy_mm": [
+      -8.0,
+      -8.0,
+      48.0,
+      8.0
+    ],
+    "bounds_xyz_mm": [
+      -8.0,
+      -8.0,
+      -1.5,
+      48.0,
+      8.0,
+      1.5
+    ],
+    "thickness_mm": 3.0,
+    "hole_diameter_mm": 8.45
+  },
+  "02_straight_3_holes": {
+    "file": "02_straight_3_holes.stl",
+    "overall_xy_mm": [
+      96.0,
+      16.0
+    ],
+    "overall_xyz_mm": [
+      96.0,
+      16.0,
+      3.0
+    ],
+    "bounds_xy_mm": [
+      -8.0,
+      -8.0,
+      88.0,
+      8.0
+    ],
+    "bounds_xyz_mm": [
+      -8.0,
+      -8.0,
+      -1.5,
+      88.0,
+      8.0,
+      1.5
+    ],
+    "thickness_mm": 3.0,
+    "hole_diameter_mm": 8.45
+  },
+  "03_rotor_single_hole": {
+    "file": "03_rotor_single_hole.stl",
+    "overall_xy_mm": [
+      56.0,
+      16.0
+    ],
+    "overall_xyz_mm": [
+      56.0,
+      16.0,
+      3.0
+    ],
+    "bounds_xy_mm": [
+      -8.0,
+      -8.0,
+      48.0,
+      8.0
+    ],
+    "bounds_xyz_mm": [
+      -8.0,
+      -8.0,
+      -1.5,
+      48.0,
+      8.0,
+      1.5
+    ],
+    "thickness_mm": 3.0,
+    "hole_diameter_mm": 8.45
+  },
+  "04_diagonal_2_holes": {
+    "file": "04_diagonal_2_holes.stl",
+    "overall_xy_mm": [
+      72.569,
+      16.0
+    ],
+    "overall_xyz_mm": [
+      72.569,
+      16.0,
+      3.0
+    ],
+    "bounds_xy_mm": [
+      -8.0,
+      -8.0,
+      64.569,
+      8.0
+    ],
+    "bounds_xyz_mm": [
+      -8.0,
+      -8.0,
+      -1.5,
+      64.569,
+      8.0,
+      1.5
+    ],
+    "thickness_mm": 3.0,
+    "hole_diameter_mm": 8.45
+  },
+  "05_offset_diagonal_2_holes": {
+    "file": "05_offset_diagonal_2_holes.stl",
+    "overall_xy_mm": [
+      105.443,
+      16.0
+    ],
+    "overall_xyz_mm": [
+      105.443,
+      16.0,
+      3.0
+    ],
+    "bounds_xy_mm": [
+      -8.0,
+      -8.0,
+      97.443,
+      8.0
+    ],
+    "bounds_xyz_mm": [
+      -8.0,
+      -8.0,
+      -1.5,
+      97.443,
+      8.0,
+      1.5
+    ],
+    "thickness_mm": 3.0,
+    "hole_diameter_mm": 8.45
+  },
+  "06_half_circle_2_holes": {
+    "file": "06_half_circle_2_holes.stl",
+    "overall_xy_mm": [
+      55.995,
+      35.995
+    ],
+    "overall_xyz_mm": [
+      55.995,
+      35.995,
+      3.0
+    ],
+    "bounds_xy_mm": [
+      -7.998,
+      -7.998,
+      47.998,
+      27.998
+    ],
+    "bounds_xyz_mm": [
+      -7.998,
+      -7.998,
+      -1.5,
+      47.998,
+      27.998,
+      1.5
+    ],
+    "thickness_mm": 3.0,
+    "hole_diameter_mm": 8.45
+  },
+  "07_quarter_circle_2_holes": {
+    "file": "07_quarter_circle_2_holes.stl",
+    "overall_xy_mm": [
+      55.995,
+      55.995
+    ],
+    "overall_xyz_mm": [
+      55.995,
+      55.995,
+      3.0
+    ],
+    "bounds_xy_mm": [
+      -7.998,
+      -7.998,
+      47.998,
+      47.998
+    ],
+    "bounds_xyz_mm": [
+      -7.998,
+      -7.998,
+      -1.5,
+      47.998,
+      47.998,
+      1.5
+    ],
+    "thickness_mm": 3.0,
+    "hole_diameter_mm": 8.45
+  },
+  "08_peg_7p72x40_roundover_1p2_recommended": {
+    "file": "08_peg_7p72x40_roundover_1p2_recommended.stl",
+    "overall_xy_mm": [
+      7.72,
+      7.72
+    ],
+    "overall_xyz_mm": [
+      7.72,
+      7.72,
+      40.0
+    ],
+    "bounds_xy_mm": [
+      -3.86,
+      -3.86,
+      3.86,
+      3.86
+    ],
+    "bounds_xyz_mm": [
+      -3.86,
+      -3.86,
+      -20.0,
+      3.86,
+      3.86,
+      20.0
+    ],
+    "peg_diameter_mm": 7.72,
+    "peg_length_mm": 40.0,
+    "peg_roundover_mm": 1.2
+  },
+  "all_shapes_layout": {
+    "file": "all_shapes_layout.stl",
+    "placements": {
+      "01_straight_2_holes": {
+        "bounds_xy_mm": [
+          0.0,
+          0.0,
+          56.0,
+          16.0
+        ]
+      },
+      "02_straight_3_holes": {
+        "bounds_xy_mm": [
+          70.0,
+          0.0,
+          166.0,
+          16.0
+        ]
+      },
+      "03_rotor_single_hole": {
+        "bounds_xy_mm": [
+          180.0,
+          0.0,
+          236.0,
+          16.0
+        ]
+      },
+      "04_diagonal_2_holes": {
+        "bounds_xy_mm": [
+          0.0,
+          30.0,
+          72.569,
+          46.0
+        ]
+      },
+      "05_offset_diagonal_2_holes": {
+        "bounds_xy_mm": [
+          86.569,
+          30.0,
+          192.011,
+          46.0
+        ]
+      },
+      "06_half_circle_2_holes": {
+        "bounds_xy_mm": [
+          0.0,
+          60.0,
+          55.995,
+          95.995
+        ]
+      },
+      "07_quarter_circle_2_holes": {
+        "bounds_xy_mm": [
+          69.995,
+          60.0,
+          125.99,
+          115.995
+        ]
+      }
+    }
+  }
+}
