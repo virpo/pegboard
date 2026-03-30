@@ -12,20 +12,20 @@ AI-generated 3D-printable pegboard toy from a hand-drawn sketch.
     <td><img src="docs/assets/oliver-playing.jpg" alt="Oli playtesting the first printed pegboard set" width="100%"></td>
   </tr>
   <tr>
-    <td>A rough marker sketch Oli and I drew together, plus two constraints: the holes are `4 cm` apart and `8 mm` wide.</td>
-    <td>Oli playtesting the first working set after a few print-and-fit iterations.</td>
+    <td>A rough marker sketch Oli and I drew together. I gave Codex just two dimensions: the holes are `4 cm` apart and the pegs are `8 mm` wide.</td>
+    <td>Oli playing with the first printed set, after a little fit-and-feel iteration.</td>
   </tr>
 </table>
 
 ## Why This Exists
 
-I wanted to make a toy for Oli, but I did not want to disappear into CAD for an evening and draw every variation by hand. So I tried a different route: give an AI agent a rough sketch we drew together and two hard constraints, that the holes are `40 mm` apart and `8 mm` wide.
+We have pegboards and plywood scraps all over the apartment. I wanted to make a tiny one for Oli, or maybe even hang one on our front door instead of a wreath so visitors would have something to play with.
 
-What came back was a starting point, not a finished toy. From there it turned into a very hands-on loop: print, test, adjust, repeat.
+I had already cut the scrap wood and drilled the first board when I sat down at the computer, ready to lose an hour or two in Fusion 360. Then I looked at the sketch on my desk, took a photo, pasted it into Codex, and added the only dimensions that mattered: the holes are `40 mm` apart and the pegs are `8 mm` wide.
 
-The pegs were tuned to fit snugly, the piece holes were opened up until they felt good by hand, the gears were softened until they turned smoothly, and the printed board fit was checked with single-hole coupons before committing to full boards.
+About a minute later I had the first set of pieces. From there I just iterated a little: print, test, adjust, repeat, until the pegs fit snugly, the pieces felt good by hand, and the gears turned smoothly.
 
-Everything stays as small Python generators instead of hand-edited meshes, which makes those iterations easy. The time I did not spend drawing every variant in CAD turned into time I could spend printing, testing, and playing with Oli instead.
+Everything in this repo stays as small Python generators instead of hand-edited meshes, which made those tweaks easy. The time I did not spend drawing every variant in CAD turned into time I could spend printing, testing, and playing with Oli instead.
 
 The current set is a `40 mm` system with seven play pieces, one tuned peg, four gears, and two printable boards.
 
