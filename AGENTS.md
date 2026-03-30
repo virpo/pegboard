@@ -6,13 +6,13 @@ The models are parametric Python generators, not hand-authored CAD files. If you
 
 ## Source of truth
 
-- `generate_pegboard_shapes.py`
+- `scripts/generate_pegboard_shapes.py`
   Flat play pieces and the tuned peg.
-- `generate_pegboard_gears.py`
+- `scripts/generate_pegboard_gears.py`
   Smooth gears that mesh on the peg grid.
-- `generate_pegboard_board.py`
+- `scripts/generate_pegboard_board.py`
   Board-fit coupons and full printable pegboards.
-- `generate_repository_assets.py`
+- `scripts/generate_repository_assets.py`
   README images.
 
 ## Current calibrated defaults
@@ -25,14 +25,16 @@ The models are parametric Python generators, not hand-authored CAD files. If you
 
 ## Output folders
 
-- `pieces/`
+- `models/pieces/`
   Final play pieces and the tuned peg.
-- `gears/`
+- `models/gears/`
   Final gears.
-- `boards/`
+- `models/boards/`
   Full printable pegboards using the current provisional board-hole size.
-- `board_prototypes/`
+- `models/board_prototypes/`
   Single-hole fit coupons for board calibration.
+- `docs/`
+  Supporting notes and README assets.
 
 ## Rules for agents
 
@@ -57,8 +59,8 @@ The models are parametric Python generators, not hand-authored CAD files. If you
 python3 -m venv .venv
 . .venv/bin/activate
 pip install -r requirements.txt
-python generate_pegboard_shapes.py
-python generate_pegboard_gears.py
-python generate_pegboard_board.py
-python generate_repository_assets.py
+python scripts/generate_pegboard_shapes.py
+python scripts/generate_pegboard_gears.py
+python scripts/generate_pegboard_board.py
+python scripts/generate_repository_assets.py
 ```

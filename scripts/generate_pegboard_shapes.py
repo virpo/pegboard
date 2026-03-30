@@ -21,8 +21,9 @@ PEG_ROUNDOVER_MM = 1.2
 ARC_SEGMENTS_PER_QUARTER = 32
 REVOLVE_SECTIONS = 128
 
-ROOT = Path(__file__).resolve().parent
-OUTPUT_DIR = ROOT / "pieces"
+ROOT = Path(__file__).resolve().parent.parent
+OUTPUT_DIR = ROOT / "models" / "pieces"
+DOC_PATH = ROOT / "docs" / "pieces.md"
 
 
 def mm(value: float) -> float:
@@ -274,22 +275,22 @@ Generated from `generate_pegboard_shapes.py`.
 - Peg length: `{PEG_LENGTH_MM} mm`
 - Peg end roundover: `{PEG_ROUNDOVER_MM} mm`
 
-The hole diameter is intentionally tuned upward because your printer closes printed holes relative to CAD. The recommended peg diameter is tuned downward because your printer makes outside diameters print slightly oversized. If your printer runs tighter or looser later, edit `HOLE_DIAMETER_MM` and `PEG_DIAMETER_MM` in `generate_pegboard_shapes.py` and re-run the script.
+The hole diameter is intentionally tuned upward because your printer closes printed holes relative to CAD. The recommended peg diameter is tuned downward because your printer makes outside diameters print slightly oversized. If your printer runs tighter or looser later, edit `HOLE_DIAMETER_MM` and `PEG_DIAMETER_MM` in `scripts/generate_pegboard_shapes.py` and re-run the script.
 
 The single exported peg is the measured best-fit version: `7.72 mm` CAD diameter, `40.0 mm` length, and `1.2 mm` end roundover.
 
 ## Files
 
-Each STL in `pieces/` is a separate printable part. `pieces/all_shapes_layout.stl` contains the seven flat pieces arranged on one virtual plate for quick viewing. The tuned peg is exported into the same folder as its own STL.
+Each STL in `models/pieces/` is a separate printable part. `models/pieces/all_shapes_layout.stl` contains the seven flat pieces arranged on one virtual plate for quick viewing. The tuned peg is exported into the same folder as its own STL.
 
 Drag any STL directly into Bambu Studio. If you want to inspect or re-export later, keep the Python source file because all dimensions are parametric there.
 """
-    (ROOT / "PIECES_README.md").write_text(readme)
+    DOC_PATH.write_text(readme)
     (OUTPUT_DIR / "dimensions.json").write_text(json.dumps(metadata, indent=2))
 
 
 def main():
-    OUTPUT_DIR.mkdir(exist_ok=True)
+    OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
     for old_stl in OUTPUT_DIR.glob("*.stl"):
         old_stl.unlink()
 

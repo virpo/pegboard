@@ -14,8 +14,8 @@ The goal was simple: get to something real quickly, then spend the time on print
     <th width="50%">What it gave me</th>
   </tr>
   <tr>
-    <td><img src="assets/sketch.jpg" alt="Hand-drawn pegboard sketch" width="100%"></td>
-    <td><img src="assets/oliver-playing.jpg" alt="Oli playtesting the first printed pegboard set" width="100%"></td>
+    <td><img src="docs/assets/sketch.jpg" alt="Hand-drawn pegboard sketch" width="100%"></td>
+    <td><img src="docs/assets/oliver-playing.jpg" alt="Oli playtesting the first printed pegboard set" width="100%"></td>
   </tr>
   <tr>
     <td>One rough marker sketch Oli and I drew together, plus two constraints: the holes are `4 cm` apart and `8 mm` wide.</td>
@@ -46,31 +46,21 @@ You can ask an agent to:
 ## What's in this repository
 
 <p align="center">
-  <img src="assets/overview.png" alt="Overview render showing the play pieces, gears, printable pegboards, and tuned pegs included in the repository" width="100%">
+  <img src="docs/assets/overview.png" alt="Overview render showing the play pieces, gears, printable pegboards, and tuned pegs included in the repository" width="100%">
 </p>
 
 | Play pieces | Gears | Pegboards and pegs |
 | --- | --- | --- |
-| Seven flat pieces in [pieces/](pieces) with `8.45 mm` holes, tuned to lift on and off the pegs easily. | Four smooth gears in [gears/](gears), tuned to mesh on the `40 mm` peg grid. | Two printable boards in [boards/](boards) plus the tuned peg in [pieces/](pieces). |
+| Seven flat pieces in [models/pieces/](models/pieces) with `8.45 mm` holes, tuned to lift on and off the pegs easily. | Four smooth gears in [models/gears/](models/gears), tuned to mesh on the `40 mm` peg grid. | Two printable boards in [models/boards/](models/boards) plus the tuned peg in [models/pieces/](models/pieces). |
 
 ## Repository layout
 
-- `pieces/`  
-  Final play pieces plus the tuned peg.
-- `gears/`  
-  Final smooth gears with beveled outer edges.
-- `boards/`  
-  Printable `4x4` and `5x5` pegboards using the current provisional board-hole size.
-- `board_prototypes/`  
-  Single-hole fit coupons for locking in the final printed-board hole diameter.
-- `generate_pegboard_shapes.py`  
-  Generates the flat pieces and tuned peg.
-- `generate_pegboard_gears.py`  
-  Generates the gear set.
-- `generate_pegboard_board.py`  
-  Generates the board-fit coupons and the full printable boards.
-- `generate_repository_assets.py`  
-  Builds the README images.
+- `models/`  
+  Final STL exports plus the board-fit prototypes.
+- `scripts/`  
+  Parametric generators for pieces, gears, boards, and README assets.
+- `docs/`  
+  Supporting notes plus the README images.
 - `AGENTS.md`  
   Instructions for coding agents that want to extend the set.
 
@@ -88,15 +78,15 @@ You can ask an agent to:
 python3 -m venv .venv
 . .venv/bin/activate
 pip install -r requirements.txt
-python generate_pegboard_shapes.py
-python generate_pegboard_gears.py
-python generate_pegboard_board.py
-python generate_repository_assets.py
+python scripts/generate_pegboard_shapes.py
+python scripts/generate_pegboard_gears.py
+python scripts/generate_pegboard_board.py
+python scripts/generate_repository_assets.py
 ```
 
 ## Notes
 
-- [PIECES_README.md](PIECES_README.md)
-- [GEARS_README.md](GEARS_README.md)
-- [BOARDS_README.md](BOARDS_README.md)
-- [board_prototypes/README.md](board_prototypes/README.md)
+- [docs/pieces.md](docs/pieces.md)
+- [docs/gears.md](docs/gears.md)
+- [docs/boards.md](docs/boards.md)
+- [models/board_prototypes/README.md](models/board_prototypes/README.md)

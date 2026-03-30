@@ -14,9 +14,9 @@ The board-hole size is still provisional until the single-hole coupon test is co
 
 ## Files
 
-- `boards/01_pegboard_4x4_hole_8p30_provisional.stl`
-- `boards/02_pegboard_5x5_hole_8p30_provisional.stl`
+- `models/boards/01_pegboard_4x4_hole_8p30_provisional.stl`
+- `models/boards/02_pegboard_5x5_hole_8p30_provisional.stl`
 - The `4x4` board is `160 x 160 mm` overall.
 - The `5x5` board is `200 x 200 mm` overall.
 
-If the coupon test later points to a different hole diameter, update `BOARD_HOLE_DIAMETER_MM` in `generate_pegboard_board.py` and regenerate.
+If the coupon test later points to a different hole diameter, update `BOARD_HOLE_DIAMETER_MM` in `scripts/generate_pegboard_board.py` and regenerate.

@@ -14,8 +14,9 @@ import trimesh
 from trimesh.creation import triangulate_polygon
 
 
-ROOT = Path(__file__).resolve().parent
-OUTPUT_DIR = ROOT / "gears"
+ROOT = Path(__file__).resolve().parent.parent
+OUTPUT_DIR = ROOT / "models" / "gears"
+DOC_PATH = ROOT / "docs" / "gears.md"
 
 GRID_PITCH_MM = 40.0
 HOLE_DIAMETER_MM = 8.45
@@ -513,12 +514,12 @@ def write_notes(
         key = f"{TOOTH_COUNTS.index(teeth) + 1:02d}_gear_{teeth}t"
         lines.append(f"- `{teeth}T`: `{metadata[key]['blocked_offsets']}`")
 
-    (ROOT / "GEARS_README.md").write_text("\n".join(lines) + "\n")
+    DOC_PATH.write_text("\n".join(lines) + "\n")
     (OUTPUT_DIR / "gear_dimensions.json").write_text(json.dumps(metadata, indent=2))
 
 
 def main():
-    OUTPUT_DIR.mkdir(exist_ok=True)
+    OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
     for old_stl in OUTPUT_DIR.glob("*.stl"):
         old_stl.unlink()
 

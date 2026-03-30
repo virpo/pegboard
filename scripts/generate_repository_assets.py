@@ -15,8 +15,8 @@ import generate_pegboard_gears as gears_gen
 import generate_pegboard_shapes as shapes_gen
 
 
-ROOT = Path(__file__).resolve().parent
-ASSETS_DIR = ROOT / "assets"
+ROOT = Path(__file__).resolve().parent.parent
+ASSETS_DIR = ROOT / "docs" / "assets"
 
 SKETCH_SOURCE = Path.home() / "Downloads" / "IMG_7132.jpeg"
 PLAY_SOURCE = Path.home() / "Downloads" / "IMG_7198 2.jpeg"
@@ -52,7 +52,7 @@ def load_font(size: int, bold: bool = False):
 
 
 def ensure_assets_dir():
-    ASSETS_DIR.mkdir(exist_ok=True)
+    ASSETS_DIR.mkdir(parents=True, exist_ok=True)
 
 
 def circle(center: tuple[float, float], diameter: float):

@@ -10,9 +10,10 @@ from shapely.ops import unary_union
 import trimesh
 
 
-ROOT = Path(__file__).resolve().parent
-PROTOTYPE_OUTPUT_DIR = ROOT / "board_prototypes"
-BOARD_OUTPUT_DIR = ROOT / "boards"
+ROOT = Path(__file__).resolve().parent.parent
+PROTOTYPE_OUTPUT_DIR = ROOT / "models" / "board_prototypes"
+BOARD_OUTPUT_DIR = ROOT / "models" / "boards"
+DOC_PATH = ROOT / "docs" / "boards.md"
 
 GRID_PITCH_MM = 40.0
 COUPON_HOLE_DIAMETERS_MM = (8.25, 8.30, 8.35)
@@ -164,20 +165,20 @@ def write_boards_notes(metadata: dict[str, dict[str, object]]):
         "",
         "## Files",
         "",
-        "- `boards/01_pegboard_4x4_hole_8p30_provisional.stl`",
-        "- `boards/02_pegboard_5x5_hole_8p30_provisional.stl`",
+        "- `models/boards/01_pegboard_4x4_hole_8p30_provisional.stl`",
+        "- `models/boards/02_pegboard_5x5_hole_8p30_provisional.stl`",
         "- The `4x4` board is `160 x 160 mm` overall.",
         "- The `5x5` board is `200 x 200 mm` overall.",
         "",
-        "If the coupon test later points to a different hole diameter, update `BOARD_HOLE_DIAMETER_MM` in `generate_pegboard_board.py` and regenerate.",
+        "If the coupon test later points to a different hole diameter, update `BOARD_HOLE_DIAMETER_MM` in `scripts/generate_pegboard_board.py` and regenerate.",
     ]
-    (ROOT / "BOARDS_README.md").write_text("\n".join(lines) + "\n")
+    DOC_PATH.write_text("\n".join(lines) + "\n")
     (BOARD_OUTPUT_DIR / "board_dimensions.json").write_text(json.dumps(metadata, indent=2))
 
 
 def main():
-    PROTOTYPE_OUTPUT_DIR.mkdir(exist_ok=True)
-    BOARD_OUTPUT_DIR.mkdir(exist_ok=True)
+    PROTOTYPE_OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
+    BOARD_OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
     for old_stl in PROTOTYPE_OUTPUT_DIR.glob("*.stl"):
         old_stl.unlink()
     for old_stl in BOARD_OUTPUT_DIR.glob("*.stl"):
