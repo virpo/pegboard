@@ -252,23 +252,23 @@ def generate_overview():
 
     board_4x4 = board_geometry(4, 4)
     board_5x5 = board_geometry(5, 5)
-    draw_centered(board_4x4, 1125, 760, 1.62, BOARD_FILL)
-    draw_centered(board_5x5, 1450, 740, 1.45, BOARD_FILL)
+    draw_centered(board_4x4, 1125, 725, 1.62, BOARD_FILL)
+    draw_centered(board_5x5, 1450, 705, 1.45, BOARD_FILL)
 
     peg = peg_profile()
     peg_vertical = affinity.rotate(peg, 90.0, origin=(0.0, 0.0))
-    peg_color = "#D9CBB8"
+    peg_color = "#DD825A"
     peg_layout = [
-        (1005, 930),
-        (1065, 930),
-        (1125, 930),
-        (1185, 930),
-        (1245, 930),
-        (1305, 930),
-        (1365, 930),
-        (1425, 930),
-        (1485, 930),
-        (1545, 930),
+        (1030, 980),
+        (1080, 980),
+        (1130, 980),
+        (1180, 980),
+        (1230, 980),
+        (1320, 980),
+        (1370, 980),
+        (1420, 980),
+        (1470, 980),
+        (1520, 980),
     ]
     for center_x, center_y in peg_layout:
         draw_centered(peg_vertical, center_x, center_y, 2.1, peg_color)
