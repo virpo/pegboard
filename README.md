@@ -14,11 +14,17 @@ I had a silly idea for a pegboard toy. Before opening Fusion, SketchUp, or any o
 
 This repository is the result. The geometry is kept as plain Python generators, then tuned through real print-and-fit tests.
 
+## What's in this repository
+
 <p align="center">
-  <img src="assets/overview.png" alt="Overview render of the play pieces, gears, and printable pegboards included in the repository" width="100%">
+  <img src="assets/overview.png" alt="Overview render showing the play pieces, gears, printable pegboards, and tuned pegs included in the repository" width="100%">
 </p>
 
-## What's here
+| Play pieces | Gears | Pegboards and pegs |
+| --- | --- | --- |
+| Seven flat pieces in [pieces/](pieces) with `8.45 mm` holes, tuned to lift on and off the pegs easily. | Four smooth gears in [gears/](gears), tuned to mesh on the `40 mm` peg grid. | Two printable boards in [boards/](boards) plus the tuned peg in [pieces/](pieces). |
+
+## Files
 
 - `pieces/`  
   Final play pieces plus the tuned peg.
