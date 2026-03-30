@@ -1,18 +1,20 @@
 # 📍 Pegboard
 
-A small printable pegboard toy set built on a `40 mm` grid: seven play pieces, one tuned peg, four gears, and two printable boards.
+## Why This Exists
+
+> I had a silly idea for a pegboard toy. Before opening Fusion, SketchUp, or any other CAD tool and drawing it by hand, I wanted to see what an AI agent would do with a rough sketch and two dimensions: the pegs are `40 mm` apart and `8 mm` wide.
+
+This repository is what came out of that experiment: a small printable pegboard toy set built on a `40 mm` grid, with seven play pieces, one tuned peg, four gears, and two printable boards.
 
 <p align="center">
   <img src="assets/from-sketch-to-play.jpg" alt="Original sketch next to Oli playing with the first printed set" width="100%">
 </p>
 
-| Sketch | First print |
+| What I gave AI | What it gave me |
 | --- | --- |
 | One rough marker sketch with just the peg spacing and peg diameter. | Oli playing with the first working printed set after a few fit-test iterations. |
 
-I had a silly idea for a pegboard toy. Before opening Fusion, SketchUp, or any other CAD tool and drawing it by hand, I wanted to see what an AI agent would do with a rough sketch and two dimensions: the pegs are `40 mm` apart and `8 mm` wide.
-
-This repository is the result. The geometry is kept as plain Python generators, then tuned through real print-and-fit tests.
+The geometry is kept as plain Python generators, then tuned through real print-and-fit tests.
 
 ## Use AI To Tweak It
 
