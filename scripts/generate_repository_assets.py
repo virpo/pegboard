@@ -146,6 +146,17 @@ def resize_for_repo(image: Image.Image, width: int):
     return image.resize((width, int(image.height * ratio)), Image.Resampling.LANCZOS)
 
 
+def save_jpeg(image: Image.Image, path: Path, quality: int = 86):
+    image.save(
+        path,
+        format="JPEG",
+        quality=quality,
+        optimize=True,
+        progressive=True,
+        subsampling="4:2:0",
+    )
+
+
 def framed_photo(image: Image.Image, size: tuple[int, int], radius: int, padding: int):
     base = Image.new("RGB", size, CARD)
     fitted = ImageOps.contain(ImageOps.exif_transpose(image).convert("RGB"), (size[0] - 2 * padding, size[1] - 2 * padding), Image.Resampling.LANCZOS)
@@ -168,10 +179,10 @@ def generate_story_image():
     sketch = Image.open(SKETCH_SOURCE)
     play = Image.open(PLAY_SOURCE)
 
-    processed_sketch = resize_for_repo(ImageOps.exif_transpose(sketch), 1600)
-    processed_play = resize_for_repo(ImageOps.exif_transpose(play), 1200)
-    processed_sketch.save(ASSETS_DIR / "sketch.jpg", quality=92)
-    processed_play.save(ASSETS_DIR / "oliver-playing.jpg", quality=92)
+    processed_sketch = resize_for_repo(ImageOps.exif_transpose(sketch), 1200)
+    processed_play = resize_for_repo(ImageOps.exif_transpose(play), 1000)
+    save_jpeg(processed_sketch, ASSETS_DIR / "sketch.jpg", quality=86)
+    save_jpeg(processed_play, ASSETS_DIR / "oliver-playing.jpg", quality=86)
 
     logical_w = 1800
     logical_h = 920
@@ -196,7 +207,11 @@ def generate_story_image():
     image.paste(framed_photo(sketch, card_size, radius, padding=18 * UPSCALE), (left_x, photo_y))
     image.paste(framed_photo(play, card_size, radius, padding=18 * UPSCALE), (right_x, photo_y))
 
-    image.resize((logical_w, logical_h), Image.Resampling.LANCZOS).save(ASSETS_DIR / "from-sketch-to-play.jpg", quality=92)
+    save_jpeg(
+        image.resize((logical_w, logical_h), Image.Resampling.LANCZOS),
+        ASSETS_DIR / "from-sketch-to-play.jpg",
+        quality=84,
+    )
 
 
 def generate_overview():

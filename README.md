@@ -2,12 +2,6 @@
 
 AI-generated 3D-printable pegboard toy from a hand-drawn sketch.
 
-## Why This Exists
-
-> I had a silly idea for a pegboard toy. Before opening Fusion, SketchUp, or any other CAD tool and drawing it by hand, I wanted to see what an AI agent would do with a rough sketch and two dimensions: the pegs are `40 mm` apart and `8 mm` wide.
-
-The goal was simple: get to something real quickly, then spend the time on printing, testing, and playing with Oli instead of drawing every piece from scratch.
-
 <table>
   <tr>
     <th width="50%">What I gave AI</th>
@@ -18,12 +12,16 @@ The goal was simple: get to something real quickly, then spend the time on print
     <td><img src="docs/assets/oliver-playing.jpg" alt="Oli playtesting the first printed pegboard set" width="100%"></td>
   </tr>
   <tr>
-    <td>One rough marker sketch Oli and I drew together, plus two constraints: the holes are `4 cm` apart and `8 mm` wide.</td>
+    <td>A rough marker sketch Oli and I drew together, plus two constraints: the holes are `4 cm` apart and `8 mm` wide.</td>
     <td>Oli playtesting the first working set after a few print-and-fit iterations.</td>
   </tr>
 </table>
 
-What came back was a good starting point, not a finished toy. From there it turned into a very hands-on loop: print, test, adjust, repeat.
+## Why This Exists
+
+I wanted to make a toy for Oli, but I did not want to disappear into CAD for an evening and draw every variation by hand. So I tried a different route: give an AI agent a rough sketch we drew together and two hard constraints, that the holes are `40 mm` apart and `8 mm` wide.
+
+What came back was a starting point, not a finished toy. From there it turned into a very hands-on loop: print, test, adjust, repeat.
 
 The pegs were tuned to fit snugly, the piece holes were opened up until they felt good by hand, the gears were softened until they turned smoothly, and the printed board fit was checked with single-hole coupons before committing to full boards.
 
