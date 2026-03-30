@@ -6,7 +6,9 @@ AI-generated 3D-printable pegboard toy from a hand-drawn sketch.
 
 > I had a silly idea for a pegboard toy. Before opening Fusion, SketchUp, or any other CAD tool and drawing it by hand, I wanted to see what an AI agent would do with a rough sketch and two dimensions: the pegs are `40 mm` apart and `8 mm` wide.
 
-This repository is what came out of that experiment: a small printable pegboard toy set built on a `40 mm` grid, with seven play pieces, one tuned peg, four gears, and two printable boards.
+I wanted to make something for Oli. So instead of disappearing into CAD for an evening, I tried a different route: one marker sketch, two real dimensions, and an agent.
+
+This repository is what came out of that: a small printable pegboard toy set built on a `40 mm` grid, with seven play pieces, one tuned peg, four gears, and two printable boards.
 
 <table>
   <tr>
@@ -18,12 +20,12 @@ This repository is what came out of that experiment: a small printable pegboard 
     <td><img src="assets/oliver-playing.jpg" alt="Oli playtesting the first printed pegboard set" width="100%"></td>
   </tr>
   <tr>
-    <td>One rough marker sketch with just the peg spacing and peg diameter.</td>
-    <td>Oli playtesting the first working printed set after a few fit-test iterations.</td>
+    <td>One rough marker sketch I drew with Oli, plus two constraints: the holes are `4 cm` apart and `8 mm` wide.</td>
+    <td>Oli playtesting the first working set after a few print-and-fit iterations.</td>
   </tr>
 </table>
 
-The geometry is kept as plain Python generators, then tuned through real print-and-fit tests.
+The geometry is kept as plain Python generators, then tuned through real print-and-fit tests. The nice part is that the time I did not spend manually drawing every variant in CAD turned into time I could spend printing, testing, and playing with Oli instead.
 
 ## Use AI To Tweak It
 
