@@ -6,9 +6,7 @@ AI-generated 3D-printable pegboard toy from a hand-drawn sketch.
 
 > I had a silly idea for a pegboard toy. Before opening Fusion, SketchUp, or any other CAD tool and drawing it by hand, I wanted to see what an AI agent would do with a rough sketch and two dimensions: the pegs are `40 mm` apart and `8 mm` wide.
 
-I wanted to make something for Oli. So instead of disappearing into CAD for an evening, I tried a different route: one marker sketch, two real dimensions, and an agent.
-
-This repository is what came out of that: a small printable pegboard toy set built on a `40 mm` grid, with seven play pieces, one tuned peg, four gears, and two printable boards.
+I wanted to make something for Oli without spending the whole evening drawing parts in CAD. So I tried a different route: one marker sketch, two hard constraints, and an agent.
 
 <table>
   <tr>
@@ -20,16 +18,22 @@ This repository is what came out of that: a small printable pegboard toy set bui
     <td><img src="assets/oliver-playing.jpg" alt="Oli playtesting the first printed pegboard set" width="100%"></td>
   </tr>
   <tr>
-    <td>One rough marker sketch I drew with Oli, plus two constraints: the holes are `4 cm` apart and `8 mm` wide.</td>
+    <td>One rough marker sketch Oli and I drew together, plus two constraints: the holes are `4 cm` apart and `8 mm` wide.</td>
     <td>Oli playtesting the first working set after a few print-and-fit iterations.</td>
   </tr>
 </table>
 
-The geometry is kept as plain Python generators, then tuned through real print-and-fit tests. The nice part is that the time I did not spend manually drawing every variant in CAD turned into time I could spend printing, testing, and playing with Oli instead.
+What came back was a good starting point, not a finished toy. From there it turned into a very hands-on loop: print, test, adjust, repeat.
+
+The pegs were tuned to fit snugly, the piece holes were opened up until they felt good by hand, the gears were softened until they turned smoothly, and the printed board fit was checked with single-hole coupons before committing to full boards.
+
+Everything stays as small Python generators instead of hand-edited meshes, which makes those iterations easy. The time I did not spend drawing every variant in CAD turned into time I could spend printing, testing, and playing with Oli instead.
+
+The current set is a `40 mm` system with seven play pieces, one tuned peg, four gears, and two printable boards.
 
 ## Use AI To Tweak It
 
-If you use coding agents yourself, this repo is meant to be easy to modify. There is an [AGENTS.md](AGENTS.md) at the root with the current dimensions, folder layout, and a few rules for extending the models safely.
+This repo is intentionally easy to modify with coding agents. [AGENTS.md](AGENTS.md) has the current dimensions, folder layout, and the few rules needed to extend the set safely.
 
 You can ask an agent to:
 
@@ -49,7 +53,7 @@ You can ask an agent to:
 | --- | --- | --- |
 | Seven flat pieces in [pieces/](pieces) with `8.45 mm` holes, tuned to lift on and off the pegs easily. | Four smooth gears in [gears/](gears), tuned to mesh on the `40 mm` peg grid. | Two printable boards in [boards/](boards) plus the tuned peg in [pieces/](pieces). |
 
-## Files
+## Repository layout
 
 - `pieces/`  
   Final play pieces plus the tuned peg.
@@ -76,7 +80,7 @@ You can ask an agent to:
 - Piece hole diameter: `8.45 mm`
 - Gear hole diameter: `8.45 mm`
 - Peg: `7.72 mm` diameter, `40.0 mm` long, `1.2 mm` end roundover
-- Printed board hole diameter: currently `8.30 mm` and still being validated
+- Printed board hole diameter: currently `8.30 mm`, still being validated
 
 ## Regenerate
 
