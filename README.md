@@ -1,5 +1,7 @@
 # 📍 Pegboard
 
+AI-generated 3D-printable pegboard toy from a hand-drawn sketch.
+
 ## Why This Exists
 
 > I had a silly idea for a pegboard toy. Before opening Fusion, SketchUp, or any other CAD tool and drawing it by hand, I wanted to see what an AI agent would do with a rough sketch and two dimensions: the pegs are `40 mm` apart and `8 mm` wide.
