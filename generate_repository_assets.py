@@ -175,13 +175,18 @@ def resize_for_repo(image: Image.Image, width: int):
     return image.resize((width, int(image.height * ratio)), Image.Resampling.LANCZOS)
 
 
-def rounded_photo(image: Image.Image, size: tuple[int, int], radius: int):
-    photo = fit_image(image, size).convert("RGB")
+def framed_photo(image: Image.Image, size: tuple[int, int], radius: int, padding: int):
+    base = Image.new("RGB", size, CARD)
+    fitted = ImageOps.contain(ImageOps.exif_transpose(image).convert("RGB"), (size[0] - 2 * padding, size[1] - 2 * padding), Image.Resampling.LANCZOS)
+    offset = ((size[0] - fitted.width) // 2, (size[1] - fitted.height) // 2)
+    base.paste(fitted, offset)
+
     mask = Image.new("L", size, 0)
     mask_draw = ImageDraw.Draw(mask)
     mask_draw.rounded_rectangle((0, 0, size[0], size[1]), radius=radius, fill=255)
+
     result = Image.new("RGB", size, BACKGROUND)
-    result.paste(photo, mask=mask)
+    result.paste(base, mask=mask)
     return result
 
 
@@ -198,23 +203,11 @@ def generate_story_image():
     processed_play.save(ASSETS_DIR / "oliver-playing.jpg", quality=92)
 
     logical_w = 1800
-    logical_h = 900
+    logical_h = 920
     image = Image.new("RGB", (logical_w * UPSCALE, logical_h * UPSCALE), BACKGROUND)
     draw = ImageDraw.Draw(image)
-    title_font = load_font(44 * UPSCALE, bold=True)
-    body_font = load_font(22 * UPSCALE)
-    label_font = load_font(20 * UPSCALE, bold=True)
-
-    draw.text((96 * UPSCALE, 74 * UPSCALE), "from sketch to play", fill=TEXT, font=title_font)
-    draw.text(
-        (96 * UPSCALE, 132 * UPSCALE),
-        "A rough drawing, two dimensions, and a lot of test prints.",
-        fill=SUBTLE,
-        font=body_font,
-    )
-
-    photo_y = 210 * UPSCALE
-    card_size = (760 * UPSCALE, 560 * UPSCALE)
+    photo_y = 92 * UPSCALE
+    card_size = (760 * UPSCALE, 720 * UPSCALE)
     gap = 88 * UPSCALE
     left_x = 96 * UPSCALE
     right_x = left_x + card_size[0] + gap
@@ -229,11 +222,8 @@ def generate_story_image():
             width=3 * UPSCALE,
         )
 
-    image.paste(rounded_photo(sketch, card_size, radius), (left_x, photo_y))
-    image.paste(rounded_photo(play, card_size, radius), (right_x, photo_y))
-
-    draw.text((left_x, (photo_y + card_size[1] + 28 * UPSCALE)), "the sketch", fill=TEXT, font=label_font)
-    draw.text((right_x, (photo_y + card_size[1] + 28 * UPSCALE)), "Oliver playing with the first set", fill=TEXT, font=label_font)
+    image.paste(framed_photo(sketch, card_size, radius, padding=18 * UPSCALE), (left_x, photo_y))
+    image.paste(framed_photo(play, card_size, radius, padding=18 * UPSCALE), (right_x, photo_y))
 
     image.resize((logical_w, logical_h), Image.Resampling.LANCZOS).save(ASSETS_DIR / "from-sketch-to-play.jpg", quality=92)
 
