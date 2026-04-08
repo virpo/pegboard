@@ -21,7 +21,7 @@ AI-generated 3D-printable pegboard toy from a hand-drawn sketch.
 
 We have pegboards and plywood scraps all over the apartment. I wanted to make a tiny one for Oli, or maybe even hang one on our front door instead of a wreath so visitors would have something to play with.
 
-I had already cut the scrap wood and drilled the first board when I sat down at the computer, ready to lose an hour or two in Fusion 360. Then I looked at the sketch on my desk, took a photo, pasted it into Codex, and added the only dimensions that mattered: the holes are `40 mm` apart and the pegs are `8 mm` wide.
+I had already cut the scrap wood and drilled the first board when I sat down at the computer, ready to lose an hour or two in Fusion. Then I looked at the sketch on my desk, took a photo, pasted it into Codex, and added the only dimensions that mattered: the holes are `40 mm` apart and the pegs are `8 mm` wide.
 
 About a minute later I had the first set of pieces. From there I just iterated a little: print, test, adjust, repeat, until the pegs fit snugly, the pieces felt good by hand, and the gears turned smoothly.
 
